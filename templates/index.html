@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Price Predictor</title>
+    <style>
+        body {
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            margin: 10px 0 5px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 12px 20px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .note {
+            font-size: 12px;
+            color: gray;
+            margin-top: 20px;
+        }
+
+        .prediction {
+            margin-top: 30px;
+            font-size: 20px;
+            color: darkgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>🚗 Car Price Predictor</h2>
+        <form action="{{ url_for('predict') }}" method="post">
+
+            <label for="year">1. Year of Manufacture:</label>
+            <input name="Year" id="year" type="number" min="2000" max="2025" placeholder="2018" required>
+
+            <label for="engine">2. Engine Capacity (cc):</label>
+            <input name="Engine" id="engine" type="number" min="600" max="6600" step="0.1" placeholder="1498" required>
+
+            <label for="ftcap">3. Fuel Tank Capacity (litres):</label>
+            <input name="Fuel Tank Capacity" id="ftcap" type="number" min="15" max="105" step="0.1" placeholder="50" required>
+
+            <label for="mp">4. Max Power (bhp):</label>
+            <input name="Max Power (bhp)" id="mp" type="number" min="35" max="660" step="0.1" placeholder="116" required>
+
+            <label for="mt">5. Max Torque (Nm):</label>
+            <input name="Max Torque (Nm)" id="mt" type="number" min="48" max="780" step="0.1" placeholder="200" required>
+
+            <label for="trans"><strong>6. Transmission Type:</strong></label>
+            <select name="Transmission_Manual" id="trans" required>
+                <option value="">-- Select --</option>
+                <option value="1">Manual</option>
+                <option value="0">Automatic</option>
+            </select>
+
+            <label for="drivetrain">7. Is it Front-Wheel Drive (FWD)?</label>
+            <select name="Drivetrain_FWD" id="drivetrain" required>
+                <option value="">-- Select --</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+
+            <button type="submit">🔍 Predict Selling Price</button>
+        </form>
+
+        <div class="prediction">
+            {{ prediction_text }}
+        </div>
+
+        <div class="note">
+            *Note: This app uses car price trends based on an Indian car price dataset from Kaggle.
+        </div>
+    </div>
+</body>
+
+</html>

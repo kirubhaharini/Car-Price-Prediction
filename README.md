@@ -1,2 +1,2 @@
-# Image-Classification-of-Movie-Stars
-Image classification project using images of movie stars
+# Regression to predict car price models
+Dataset obtained from: https://www.kaggle.com/datasets/nehalbirla/vehicle-dataset-from-cardekho

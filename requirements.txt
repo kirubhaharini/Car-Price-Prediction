@@ -1,16 +1,34 @@
+blinker @ file:///C:/b/abs_b1i87khtob/croot/blinker_1737448732095/work
+category_encoders==2.8.1
 certifi==2020.6.20
 chardet==3.0.4
 click==7.1.2
+colorama @ file:///C:/b/abs_a9ozq0l032/croot/colorama_1672387194846/work
 Flask==1.1.2
-gunicorn
+gunicorn==23.0.0
 idna==2.10
 itsdangerous==1.1.0
 Jinja2==2.11.2
+joblib @ file:///C:/b/abs_f4b98l6lgk/croot/joblib_1718217224240/work
 jsonify==0.5
 MarkupSafe==1.1.1
+mkl-service==2.4.0
+mkl_fft @ file:///C:/Users/dev-admin/mkl/mkl_fft_1730823082242/work
+mkl_random @ file:///C:/Users/dev-admin/mkl/mkl_random_1730822522280/work
+numpy @ file:///C:/b/abs_c1ywpu18ar/croot/numpy_and_numpy_base_1708638681471/work/dist/numpy-1.26.4-cp310-cp310-win_amd64.whl#sha256=ebb5aa2b36d8afa5ec3231c19e5a1fc75b6d85e7db483f0fb9e77dad58469977
+packaging==25.0
+pandas==2.3.1
+patsy==1.0.1
+python-dateutil==2.9.0.post0
+pytz==2025.2
 requests==2.24.0
+scikit-learn==1.7.0
+scipy==1.11.4
+six==1.17.0
 sklearn==0.0
-threadpoolctl==2.1.0
+statsmodels==0.14.5
+threadpoolctl==3.6.0
+tzdata==2025.2
 urllib3==1.25.9
 Werkzeug==1.0.1
 wincertstore==0.2
